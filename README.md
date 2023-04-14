@@ -1,23 +1,44 @@
 # Exception Handling Assignment
 
-Write a program that reads an ARXML file containing a list of containers, each with a unique ID, 
-and reorders the containers alphabetically by their name sub- container “"SHORT-NAME"”.
+This assignment requires you to write a program that can read and reorder containers in an ARXML file. ARXML stands for Autosar XML, which is a format used by AUTOSAR (AUTomotive Open System ARchitecture), a standardization initiative for the automotive industry.
 
-The program should write the reordered containers to a new ARXML file.
+## Task Description
 
-ARXML stands for Autosar xml
+Your program should perform the following steps:
 
-Autosar stands for AUTomotive Open System ARchitecture
+- Read an ARXML file that contains a list of containers, each with a unique ID and 
+a name sub-container “SHORT-NAME”.
+
+- Reorder the containers alphabetically by their name sub-container “SHORT-NAME”.
+
+- Write the reordered containers to a new ARXML file with the same name as the input file, 
+but with “_mod.arxml” appended to it. For example, if the input file is “Rte_Ecuc.arxml”, 
+the output file should be “Rte_Ecuc_mod.arxml”.
 
 ## Requirements:
-- 1- The name of the arxml file shall be an argument which needs to passed through the command line.
 
-- 2- If the file is not having .arxml extension then you should trigger a user defined handled 
-exception “NotVaildAutosarFileException”.
+- The name of the arxml file shall be an argument which needs to passed through the command line.
 
-- 3- If the file is empty, then you should trigger user defined unhandled exception “EmptyAutosarFileException”
+- If the input file doesn't have an .arxml extension, user-defined exception 
+called “NotValidAutosarFileException”.
 
-- 4- The output file shall be named as the same of the input file concatenated with “_mod.arxml” 
+- If the input file is empty, your program should throw a user-defined exception 
+called “EmptyAutosarFileException”.
+
+- The output file shall be named as the same of the input file concatenated with “_mod.arxml”
 • e.g. if the input was named “Rte_Ecuc.arxml” then the output should be “Rte_Ecuc_mod.arxml”.
 
-- 5- Assume any missing requirement.
+- If any requirement is missing or unclear, you should make reasonable assumptions and 
+document them in your code.
+
+## Files Description:
+
+- **ArxmlSorter.java**: This is the class where you should implement your program logic.
+
+- **Empty.arxml**: This is an empty ARXML file for testing the empty file case.
+
+- **Normal.arxml**: This is a normal ARXML file for testing the normal case.
+
+- **Report_Lap_6.docx**: This is a Word document for testing the wrong extension case.
+
+- **test_cases.bat**: This is a batch file that runs your program with different input files for testing purposes.
