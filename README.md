@@ -42,3 +42,21 @@ document them in your code.
 - **Report_Lap_6.docx**: This is a Word document for testing the wrong extension case.
 
 - **test_cases.bat**: This is a batch file that runs your program with different input files for testing purposes.
+
+## How to run:
+
+To run your program with a single input file, use the following command:
+
+`java ArxmlSorter.java <your_file>`
+
+where `<your_file>` is the name of the ARXML file you want to process. For example:
+
+`java ArxmlSorter.java Normal.arxml`
+
+This will create a new file called “Normal_mod.arxml” with the reordered containers.
+
+To run your program with all the test files provided, use the following command:
+
+`test_cases.bat`
+
+This will run your program with each of the test files and show the output on the console.
